@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f4f6fb;
+    min-height: 100vh;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+    width: 200px;
+    background: #fff;
+    min-height: 100vh;
+    padding: 20px 0;
+    border-right: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    background: #1abc9c;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item:hover {
+    color: #1abc9c;
+}
+
+.nav-item.active {
+    color: #1abc9c;
+    font-weight: bold;
+}
+
+.nav-sub {
+    padding: 6px 44px;
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+}
+
+.nav-sub:hover {
+    color: #1abc9c;
+}
+
+.nav-sub.active-sub {
+    color: #1abc9c;
+    font-weight: bold;
+}
+
+/* ── MAIN ── */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── TOP NAV ── */
+.topnav {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.topnav-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.hamburger {
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.search-bar {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 13px;
+    width: 200px;
+    outline: none;
+}
+
+.topnav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.notif-icon {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.badge-dot {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: #1abc9c;
+    color: #fff;
+    font-size: 9px;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.badge-dot.pink {
+    background: #e91e8c;
+}
+
+.lang {
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.user-info p {
+    color: #888;
+    font-size: 11px;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ── CONTENT ── */
+.content {
+    padding: 24px;
+    flex: 1;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.page-header p {
+    font-size: 13px;
+    color: #888;
+}
+
+.period-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.period-selector strong {
+    font-size: 14px;
+}
+
+.period-selector p {
+    font-size: 11px;
+    color: #888;
+}
+
+/* ── STAT CARDS ── */
+.stat-cards {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    flex: 1 1 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.stat-num {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+.stat-num.pink {
+    color: #e91e8c;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #888;
+}
+
+.player-name {
+    font-size: 12px;
+    color: #555;
+    font-weight: bold;
+}
+
+.up { color: #1abc9c; font-size: 14px; }
+.down { color: #e91e8c; font-size: 14px; }
+
+/* ── CIRCLE PROGRESS ── */
+.event-card {
+    text-align: center;
+}
+
+.circle-progress {
+    position: relative;
+    width: 80px;
+    margin: 0 auto 8px;
+}
+
+.circular-chart {
+    width: 80px;
+    height: 80px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255,255,255,0.35);
+    stroke-width: 3;
+}
+
+.circle {
+    fill: none;
+    stroke: #1abc9c;
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.circle-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.event-sub {
+    font-size: 11px;
+    color: #eee;
+}
+
+/* ── BOTTOM ROW ── */
+.bottom-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ── BEST SELLING ── */
+.best-selling {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 340px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.bs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.bs-header h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tabs {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: #888;
+}
+
+.tab {
+    cursor: pointer;
+    padding-bottom: 2px;
+}
+
+.tab.active {
+    color: #1abc9c;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.bs-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Simple CSS donut */
+.donut-wrap {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.donut {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#1abc9c 0% 45%, #e91e8c 45% 75%, #ccc 75% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.donut::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.donut-label {
+    position: relative;
+    z-index: 1;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.donut-legend {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.green { background: #1abc9c; }
+.dot.pink  { background: #e91e8c; }
+.dot.gray  { background: #ccc; }
+
+.bs-info p {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.bs-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.bs-stats strong {
+    font-size: 15px;
+    display: block;
+}
+
+.bs-stats p {
+    font-size: 11px;
+    color: #888;
+    margin: 0;
+}
+
+/* ── TICKET TODAY ── */
+.ticket-today {
+    background: #1abc9c;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 260px;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ticket-today h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.ticket-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.ticket-num {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.pcs {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-left: 4px;
+}
+
+.ticket-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ticket-percent {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ticket-percent small {
+    font-size: 10px;
+    opacity: 0.85;
+    font-weight: normal;
+}
+
+.progress-bar {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    height: 8px;
+    margin-bottom: 14px;
+}
+
+.progress-fill {
+    background: #fff;
+    width: 72%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.ticket-desc {
+    font-size: 12px;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.view-detail {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-detail:hover {
+    text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════
+   FULL-PHOTO CARDS
+   Every card is now just a photo filling the
+   whole card — no text, no overlay. Swap the
+   background-image URLs in the HTML for your
+   own photos any time.
+   ══════════════════════════════════════════ */
+
+.photo-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 220px;
+    padding: 0;
+}
+
+.best-selling.photo-card,
+.ticket-today.photo-card {
+    min-height: 300px;
+    background-color: transparent;
+}

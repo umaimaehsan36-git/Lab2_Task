@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f7fb;
+    padding: 40px 20px;
+}
+
+.team {
+    padding-top: 50px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+    font-size: 26px;
+}
+
+/* Task 3 — ::after decorative underline on heading */
+.team-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    width: 40px;
+    background: #9b59b6;
+    border-radius: 5px;
+}
+
+/* Task 1 — Flexbox row with wrap and gap */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    align-items: stretch;
+}
+
+/* Task 2 — position relative on card for badge */
+.card {
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-height: 180px;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 40px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: relative;
+    border-top: 4px solid #9b59b6;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Task 6 — alternating backgrounds with nth-child */
+.card:nth-child(odd) {
+    background: #faf7fc;
+}
+
+.card:nth-child(even) {
+    background: #f0f4ff;
+}
+
+/* Task 2 — absolute badge inside relative card */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #9b59b6;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Task 4 — grayscale filter + transition on avatar */
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0 auto 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.avatar:hover {
+    filter: grayscale(0%);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Task 3 — ::before star icon on role */
+.role {
+    font-size: 13px;
+    color: #888;
+    position: relative;
+    display: inline-block;
+    padding-left: 16px;
+}
+
+.role::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: #9b59b6;
+    font-size: 11px;
+}
+
+/* Task 4 — drop-shadow on card hover */
+.card:hover {
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.15));
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

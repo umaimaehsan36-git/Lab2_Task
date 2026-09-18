@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <div class="form-container">
+        
+    <h2> Registration</h2>
+    <form>
+    <div class="form-grid">
+         <div class="left-col">
+              <label for="fullname">Full Name</label>
+              <input type ="text" id="fullname" name="fullname" placeholder="Enter your name"> <!-- like this name is what server see whn data arrives -->
+
+              <label for="email">Email</label>
+              <input type ="email" id="email"   name="email"   placeholder="Enter your Email">
+
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password">
+         </div>
+         <div class="right-col">
+
+              <label for ="username">User Name</label>
+              <input type="text" id="username" name="username" placeholder="Enter your username">
+
+              <label for ="phonenumber">Phone Number</label>
+              <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter your number">
+
+              <label for="confirmpasword">Confirm Password</label>
+              <input type="password" id="confirmpasword" name="confirmpasword" placeholder="Confrim your Password">
+         </div>
+
+    </div>
+
+    <p>Gender</p>
+        <div class="gender-options">
+    <label><input type="radio" name="gender" value="male"> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label>
+    <label><input type="radio" name="gender" value="other"> Prefer not to say</label>
+</div>
+
+    <button type="submit"> Registration</button>
+
+    </form>
+  </div>
+    
+</body>
+</html>
